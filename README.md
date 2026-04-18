@@ -1,21 +1,17 @@
 <p align="center">
-  <img src="docs/media/mangetsu-app-icon.png" alt="Mangetsu app icon: 満月 (full moon) on a starfield inside a red ring" width="200" height="200" />
+  <img src="docs/media/mangetsu-app-icon.png" alt="Mangetsu app icon: 満月 (full moon) on a starfield inside a red ring" width="300" height="300" />
 </p>
-<p align="center"><em>Official app icon — the kanji <strong>満月</strong> (“Mangetsu”, full moon). The web build also ships a vector mark at <code>public/mangetsu-icon.svg</code>.</em></p>
 
 # Mangetsu
 
-**Mangetsu** is the branded client for **Manga Flow**—a cross-platform manga reader and library app built as a learning-oriented project. The UI runs as a **Vite + React** web app, ships inside an **Android** shell via **Capacitor**, and can talk to an optional **HTTP API** for catalog search, chapter metadata, and page URLs when you point the app at your own backend base URL.
+**Mangetsu** is a cross-platform manga reader and library app built as a learning-oriented project. The UI runs as a **Vite + React** web app, ships inside an **Android** shell via **Capacitor**, and can talk to an optional **HTTP API** for catalog search, chapter metadata, and page URLs when you point the app at your own backend base URL.
 
 This repository is maintained for **educational purposes**: to study modern frontend architecture (React 18, TanStack Query, client-side routing, offline-friendly patterns), mobile packaging with Capacitor, and how a thin client separates **presentation** from **data acquisition**.
-
-**Repository:** [github.com/Gunjankadam/Mangetsu](https://github.com/Gunjankadam/Mangetsu)
 
 ---
 
 ## Showcase & downloads
 
-Replace the placeholders below when you publish a demo video, real screenshots, a QR code, and a hosted APK (for example via [GitHub Releases](https://github.com/Gunjankadam/Mangetsu/releases)).
 
 ### Demo video
 
@@ -26,7 +22,6 @@ Replace the placeholders below when you publish a demo video, real screenshots, 
   </a>
 </p>
 
-<p align="center"><em>Tip: drop a <code>docs/media/video-thumbnail.png</code> and point <code>src</code> to it, or use YouTube’s thumbnail URL pattern for your <code>VIDEO_ID</code>.</em></p>
 
 ### Screenshots
 
