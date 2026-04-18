@@ -37,15 +37,14 @@ This repository is maintained for **educational purposes**: to study modern fron
     <tr>
       <td align="center" valign="top" width="320">
         <strong>Scan to download</strong><br /><br />
-        <img src="docs/media/qr-apk-placeholder.svg" alt="QR code for APK — replace with image pointing to your APK URL" width="220" height="220" /><br /><br />
-        <em>Generate a QR to your public APK URL and save as e.g. <code>docs/media/qr-apk.png</code>, then update the <code>src</code> above.</em>
+        <img src="https://github.com/Gunjankadam/Mangetsu/blob/main/qrcode.png" alt="QR code for APK — replace with image pointing to your APK URL" width="220" height="220" /><br /><br />
+        <em></em>
       </td>
       <td width="48"></td>
       <td align="center" valign="middle">
         <strong>Direct download</strong><br /><br />
         <!-- TODO: link to your GitHub Release asset or other HTTPS host -->
-        <a href="https://github.com/Gunjankadam/Mangetsu/releases"><b>Download APK (Releases)</b></a><br /><br />
-        <span>After you upload <code>app-debug.apk</code> or a signed release, replace this href with the <strong>direct asset URL</strong> (right-click → copy link on the release file).</span>
+        <a href="https://drive.google.com/drive/folders/1VLKciMNQXaE-ajU8_WLVO2pkOZ2JpEZ2?usp=drive_link"><b>Download APK (Releases)</b></a><br /><br />
       </td>
     </tr>
   </table>
