@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="public/mangetsu-icon.svg" alt="Mangetsu logo" width="200" height="200" />
+  <img src="docs/media/mangetsu-app-icon.png" alt="Mangetsu app icon: 満月 (full moon) on a starfield inside a red ring" width="200" height="200" />
 </p>
+<p align="center"><em>Official app icon — the kanji <strong>満月</strong> (“Mangetsu”, full moon). The web build also ships a vector mark at <code>public/mangetsu-icon.svg</code>.</em></p>
 
 # Mangetsu
 
