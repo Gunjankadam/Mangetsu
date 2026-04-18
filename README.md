@@ -47,40 +47,6 @@ This repository is maintained for **educational purposes**: to study modern fron
 
 ---
 
-## Table of contents
-
-1. [Showcase & downloads](#showcase--downloads)
-2. [Educational goals](#educational-goals)
-3. [Why this repository does not include the backend](#why-this-repository-does-not-include-the-backend)
-4. [What you get in this repo](#what-you-get-in-this-repo)
-5. [Architecture at a glance](#architecture-at-a-glance)
-6. [Prerequisites](#prerequisites)
-7. [Getting started](#getting-started)
-8. [Environment variables](#environment-variables)
-9. [Connecting to an API](#connecting-to-an-api)
-10. [Android (Capacitor) builds](#android-capacitor-builds)
-11. [Project structure](#project-structure)
-12. [Scripts reference](#scripts-reference)
-13. [Disclaimer](#disclaimer)
-14. [License](#license)
-
----
-
-## Educational goals
-
-This project is useful if you want hands-on practice with:
-
-- **Single-page applications (SPAs)** with React, TypeScript, and Vite.
-- **Server-state management** using TanStack Query (caching, invalidation, background refresh).
-- **Client-side persistence** (SQLite via Capacitor on native, local storage patterns on web).
-- **Progressive enhancement**: the app can function as a shell that loads remote catalogs only when a backend URL is configured.
-- **Capacitor** workflows: syncing web assets into `android/`, native plugins (`App`, `Filesystem`, `Network`, community SQLite), and producing installable **APK**s.
-- **Separation of concerns**: the UI does not embed scraping logic; it consumes JSON over HTTP, which mirrors how production apps integrate with BFFs or microservices.
-
-The codebase is intended to be read, forked, and experimented with—not to encourage misuse of third-party websites. Treat third-party manga hosts respectfully and comply with their terms and applicable law.
-
----
-
 ## Why this repository does not include the backend
 
 The **Node.js backend** that powers source browsing (HTML scraping, image proxy routes, normalisation of chapter/page URLs, etc.) is **intentionally not published in this GitHub repository**. Reasons:
@@ -99,20 +65,11 @@ A scraping-oriented backend:
 
 Keeping that code **out of a public educational fork** reduces the risk that learners clone a “batteries-included” infringement pipeline. Here, the contract is explicit: **you** decide whether and how to run a compatible API, on **your** infrastructure, under **your** responsibility.
 
-### 3. Secrets, keys, and environment-specific config
-
-Real deployments need API keys, Supabase credentials, optional Playwright installs, and host-specific tuning. Those do not belong in a public tree. A minimal **client** repo plus `.env.example` keeps secrets out of history while still documenting what the UI can read at build/runtime.
-
-### 4. Independent lifecycles
-
-The client can be versioned, tagged, and released on its own (web deploy, Play Store sideloads). The backend may change daily as sites change markup. Splitting them avoids a monorepo where every HTML tweak forces an unrelated app release—or where students must debug scrapers before they can learn React.
-
-### 5. What you should do instead
+### 3. What you should do instead
 
 - Run your own compatible API locally or on a VPS, **or**
-- Point the app at a backend URL you trust (e.g. team internal), configured under **Settings → Backend link** or `VITE_MANGA_FLOW_BACKEND_URL` for static hosting.
-
-The client expects JSON shapes documented implicitly by the `src/native/Backend.ts` calls to `/api/...` routes; implementing that contract is outside this repository’s scope.
+- Point the app at a backend URL you trust (e.g. team internal), configured under **Settings → Backend link** for static hosting.
+If you need access to backend files, contact me at [kadamgunjan27@gmail.com](mailto:kadamgunjan27@gmail.com).
 
 ---
 
@@ -138,7 +95,7 @@ The client expects JSON shapes documented implicitly by the `src/native/Backend.
                             │ HTTPS (optional)
                             ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  Your Node API (not in this repo)                            │
+│  Your Node API (not in this repo/Backend)                    │
 │  Scraping / proxies / normalisation — your policy & hosting  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -230,24 +187,3 @@ This runs `vite build`, `npx cap sync android`, then Gradle `assembleDebug`. The
 This software is provided for **education**. Manga and images are usually owned by publishers and creators. Use official services where available. Do not use this project to violate terms of service, copyright, or local law. The maintainers are not responsible for how you configure backends or which sources you access.
 
 ---
-
-## License
-
-Specify your license in this section (e.g. MIT) when you choose one. Until then, all rights reserved unless you add a `LICENSE` file.
-
----
-
-## Pushing to GitHub
-
-If this folder was cloned without git metadata, initialise and push:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Mangetsu client (educational, frontend-only)"
-git branch -M main
-git remote add origin https://github.com/Gunjankadam/Mangetsu.git
-git push -u origin main
-```
-
-Use a personal access token or SSH as required by GitHub. If the remote already has a commit (e.g. empty README on GitHub), either `git pull --rebase origin main` first or force-push only if you intend to replace history.
