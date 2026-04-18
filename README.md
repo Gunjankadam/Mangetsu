@@ -139,7 +139,6 @@ Create a `.env` file in the project root (never commit real secrets). See [.env.
 
 1. Run a compatible Node server elsewhere (your own implementation of the `/api/...` contract), **or** use a private deployment you maintain.
 2. In the app: **Settings → Backend link** → paste base URL (e.g. `http://192.168.1.10:8787`) → **Save**.
-3. For **static hosting**, set `VITE_MANGA_FLOW_BACKEND_URL` at **build** time so first-time visitors do not need to paste a URL.
 
 ---
 
