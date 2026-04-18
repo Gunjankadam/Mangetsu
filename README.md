@@ -15,12 +15,8 @@ This repository is maintained for **educational purposes**: to study modern fron
 
 ### Demo video
 
-<p align="center">
-  <!-- TODO: set href to YouTube, Loom, etc. Optional: use https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg as img src -->
-  <a href="https://github.com/Gunjankadam/Mangetsu#showcase--downloads" title="Replace this link with your demo URL">
-    <img src="docs/media/video-thumbnail-placeholder.svg" alt="Demo video thumbnail — replace link and image" width="720" />
-  </a>
-</p>
+<video src="https://github.com/user-attachments/assets/ec9f7c6f-d327-404c-817a-604d22b9a1ae" controls width="280"></video>
+
 
 
 ### Screenshots
