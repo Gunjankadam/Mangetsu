@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0b0d16"/>
+      <stop offset="60%" stop-color="#05060a"/>
+      <stop offset="100%" stop-color="#03040a"/>
+    </radialGradient>
+    <linearGradient id="glow" x1="15%" y1="20%" x2="85%" y2="80%">
+      <stop offset="0%" stop-color="#ff2d7a"/>
+      <stop offset="55%" stop-color="#c04bff"/>
+      <stop offset="100%" stop-color="#6a5cff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 0.75 0"
+        result="glow"
+      />
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="crescentMask">
+      <rect width="1024" height="1024" fill="black"/>
+      <circle cx="512" cy="512" r="300" fill="white"/>
+      <circle cx="610" cy="468" r="265" fill="black"/>
+    </mask>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+
+  <!-- ambient blobs -->
+  <circle cx="800" cy="210" r="210" fill="#ff2d7a" opacity="0.10"/>
+  <circle cx="220" cy="660" r="240" fill="#c04bff" opacity="0.09"/>
+
+  <!-- crescent -->
+  <g filter="url(#softGlow)">
+    <rect x="0" y="0" width="1024" height="1024" fill="url(#glow)" mask="url(#crescentMask)" opacity="0.98"/>
+  </g>
+
+  <!-- subtle inner monogram hint -->
+  <path
+    d="M384 650V374c0-20 16-36 36-36 11 0 22 5 29 13l63 73 63-73c7-8 18-13 29-13 20 0 36 16 36 36v276c0 20-16 36-36 36s-36-16-36-36V474l-35 41c-7 9-18 14-29 14s-22-5-29-14l-35-41v176c0 20-16 36-36 36s-36-16-36-36z"
+    fill="#ffffff"
+    opacity="0.14"
+  />
+</svg>
+

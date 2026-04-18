@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Mangetsu</string>
+    <string name="title_activity_main">Mangetsu</string>
+    <string name="package_name">com.mangaflow.app</string>
+    <string name="custom_url_scheme">com.mangaflow.app</string>
+</resources>

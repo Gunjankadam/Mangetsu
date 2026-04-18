@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    /* Vibrant magenta-pink (~#E91E63) */
+    --primary: 340 80% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 340 72% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 340 80% 52%;
+    --radius: 0.75rem;
+    --surface: 240 5% 96%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 340 80% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 340 80% 52%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 95%;
+    --card: 240 6% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 6% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 340 82% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 340 75% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 340 82% 55%;
+    --surface: 240 6% 10%;
+  }
+
+  .amoled {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+    --card: 240 6% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 6% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 340 82% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 10%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 4% 10%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 340 76% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 8%;
+    --input: 0 0% 8%;
+    --ring: 340 82% 56%;
+    --surface: 240 6% 6%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    /* Hide scrollbars app-wide; scrolling still works (trackpad, touch, keys). */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  html {
+    scrollbar-gutter: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* Body: readable system stack; headings use Raleway Dots (see below). */
+    font-family: ui-sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+
+  /* Section / UI headings: dotted display (Raleway Dots); single weight → 700 may synthesize */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Raleway Dots', 'Zen Dots', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--muted) / 0.5) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Safe area padding for mobile */
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 0.5rem);
+}
+.safe-top {
+  padding-top: max(env(safe-area-inset-top, 0px), 0px);
+}
