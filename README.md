@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/mangetsu-icon.svg" alt="Mangetsu logo" width="200" height="200" />
+</p>
+
 # Mangetsu
 
 **Mangetsu** is the branded client for **Manga Flow**—a cross-platform manga reader and library app built as a learning-oriented project. The UI runs as a **Vite + React** web app, ships inside an **Android** shell via **Capacitor**, and can talk to an optional **HTTP API** for catalog search, chapter metadata, and page URLs when you point the app at your own backend base URL.
@@ -8,21 +12,68 @@ This repository is maintained for **educational purposes**: to study modern fron
 
 ---
 
+## Showcase & downloads
+
+Replace the placeholders below when you publish a demo video, real screenshots, a QR code, and a hosted APK (for example via [GitHub Releases](https://github.com/Gunjankadam/Mangetsu/releases)).
+
+### Demo video
+
+<p align="center">
+  <!-- TODO: set href to YouTube, Loom, etc. Optional: use https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg as img src -->
+  <a href="https://github.com/Gunjankadam/Mangetsu#showcase--downloads" title="Replace this link with your demo URL">
+    <img src="docs/media/video-thumbnail-placeholder.svg" alt="Demo video thumbnail — replace link and image" width="720" />
+  </a>
+</p>
+
+<p align="center"><em>Tip: drop a <code>docs/media/video-thumbnail.png</code> and point <code>src</code> to it, or use YouTube’s thumbnail URL pattern for your <code>VIDEO_ID</code>.</em></p>
+
+### Screenshots
+
+| Library / home | Reader | Settings / account |
+| :------------: | :----: | :----------------: |
+| ![Screenshot 1](docs/media/screenshot-01-placeholder.svg) | ![Screenshot 2](docs/media/screenshot-02-placeholder.svg) | ![Screenshot 3](docs/media/screenshot-03-placeholder.svg) |
+
+<p align="center"><em>Replace the three SVGs in <a href="docs/media/"><code>docs/media/</code></a> with PNG or WebP captures (same filenames), or change the paths in this table.</em></p>
+
+### Android APK & QR
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center" valign="top" width="320">
+        <strong>Scan to download</strong><br /><br />
+        <img src="docs/media/qr-apk-placeholder.svg" alt="QR code for APK — replace with image pointing to your APK URL" width="220" height="220" /><br /><br />
+        <em>Generate a QR to your public APK URL and save as e.g. <code>docs/media/qr-apk.png</code>, then update the <code>src</code> above.</em>
+      </td>
+      <td width="48"></td>
+      <td align="center" valign="middle">
+        <strong>Direct download</strong><br /><br />
+        <!-- TODO: link to your GitHub Release asset or other HTTPS host -->
+        <a href="https://github.com/Gunjankadam/Mangetsu/releases"><b>Download APK (Releases)</b></a><br /><br />
+        <span>After you upload <code>app-debug.apk</code> or a signed release, replace this href with the <strong>direct asset URL</strong> (right-click → copy link on the release file).</span>
+      </td>
+    </tr>
+  </table>
+</p>
+
+---
+
 ## Table of contents
 
-1. [Educational goals](#educational-goals)
-2. [Why this repository does not include the backend](#why-this-repository-does-not-include-the-backend)
-3. [What you get in this repo](#what-you-get-in-this-repo)
-4. [Architecture at a glance](#architecture-at-a-glance)
-5. [Prerequisites](#prerequisites)
-6. [Getting started](#getting-started)
-7. [Environment variables](#environment-variables)
-8. [Connecting to an API](#connecting-to-an-api)
-9. [Android (Capacitor) builds](#android-capacitor-builds)
-10. [Project structure](#project-structure)
-11. [Scripts reference](#scripts-reference)
-12. [Disclaimer](#disclaimer)
-13. [License](#license)
+1. [Showcase & downloads](#showcase--downloads)
+2. [Educational goals](#educational-goals)
+3. [Why this repository does not include the backend](#why-this-repository-does-not-include-the-backend)
+4. [What you get in this repo](#what-you-get-in-this-repo)
+5. [Architecture at a glance](#architecture-at-a-glance)
+6. [Prerequisites](#prerequisites)
+7. [Getting started](#getting-started)
+8. [Environment variables](#environment-variables)
+9. [Connecting to an API](#connecting-to-an-api)
+10. [Android (Capacitor) builds](#android-capacitor-builds)
+11. [Project structure](#project-structure)
+12. [Scripts reference](#scripts-reference)
+13. [Disclaimer](#disclaimer)
+14. [License](#license)
 
 ---
 
