@@ -27,9 +27,8 @@ This repository is maintained for **educational purposes**: to study modern fron
 
 | Library / home | Reader | Settings / account |
 | :------------: | :----: | :----------------: |
-| ![Screenshot 1](docs/media/screenshot-01-placeholder.svg) | ![Screenshot 2](docs/media/screenshot-02-placeholder.svg) | ![Screenshot 3](docs/media/screenshot-03-placeholder.svg) |
+| ![Screenshot 1](https://github.com/Gunjankadam/Mangetsu/blob/main/1.jpeg) | ![Screenshot 2](https://github.com/Gunjankadam/Mangetsu/blob/main/2.jpeg) | ![Screenshot 3](https://github.com/Gunjankadam/Mangetsu/blob/main/3.jpeg) |
 
-<p align="center"><em>Replace the three SVGs in <a href="docs/media/"><code>docs/media/</code></a> with PNG or WebP captures (same filenames), or change the paths in this table.</em></p>
 
 ### Android APK & QR
 
